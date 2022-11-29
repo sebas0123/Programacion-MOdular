@@ -1,13 +1,9 @@
-//Programa: triangulo.c
-//De la primaria: Teorema de Pitagoras
-//La suma de cada cateto al cuadrado es igual a la hipotenusa al cuadrado
-//Triangulo Rectangulo: un angulo de 90° y todos los lados son diferentes
-
-//Calculo de la hipotenusa
 #include <stdio.h>
 #include <math.h>
+
 void hipotenusa()
 {
+    //Aqui se pide el valor del cateto opuesto y adyacente, para calcular la hipotenusa
         int co, ca;
         float h;
         printf("Escribe la longitud del cateto adyacente: ");
@@ -15,11 +11,13 @@ void hipotenusa()
         printf("Escribe la longitud del cateto opuesto: ");
         scanf("%d",&co);
         h = sqrt((co*co)+(ca*ca));
+        //Es la operacion necesaria para la hipotenusa
         printf("La hipotenusa mide: %f",h);
 }
 
 void area()
 {
+    //Se pide dar la base y la altura del triangulo para calcular el area
         int base,alt;
         float a;
         printf("Escribe la base: ");
@@ -27,32 +25,34 @@ void area()
         printf("Escribe la altura: ");
         scanf("%d",&alt);
         a = base*alt/2;
+        //Operacion para calcular la area
         printf("El area del triangulo es: %f",a);
 }
 
 void angulo()
 {
+    //Se solicita el valor de los dos angulos que posee el triangulo para calcular el tercero
         float a1,a2,a3;
         printf("Escribe el valor de los dos angulos: ");
         scanf("%f%f",&a1,&a2);
         a3 = 180-(a1+a2);
+        //Operacion para calcular el tercer angulo
         printf("El tercer angulo mide: %f",a3);
 }
 
-int main()
+int main ()
 {
+    //Se despliega un menu para que el usuario pueda elegir que hacer
         char opc;
-        printf("a)Hipotenusa de un triangulo rectangulo \n");
-        printf("b)Area de un triangulo \n");
-        printf("c)Tercer angulo de un triangulo \n");
-        printf("Elige una opcion \n");
+        printf("\na)Hipotenusa de un triangulo rectangulo ");
+        printf("\nb)Area de un triangulo ");
+        printf("\nc)Tercer angulo de un triangulo ");
+        printf("\nElige una opcion ");
         scanf("%c",&opc);
-
-
+       
         switch(opc)
-
-{
- case 'a': hipotenusa();
+        {
+        case 'a': hipotenusa();
                   break;
 
         case 'b': area();
@@ -61,5 +61,5 @@ int main()
         case 'c': angulo();
                   break;
         }
-   }
-
+        return 0;
+}

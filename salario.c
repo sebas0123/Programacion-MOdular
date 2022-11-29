@@ -1,7 +1,7 @@
 #include <stdio.h>
 #include <math.h>
 //Inicia el programa con el main
-int salario()
+int main()
 {
 //Declaro las variables de las horas y el salrio, asi como el salrio con el IVA.
 float

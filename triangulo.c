@@ -61,4 +61,5 @@ int main()
         case 'c': angulo();
                   break;
         }
+   }
 
